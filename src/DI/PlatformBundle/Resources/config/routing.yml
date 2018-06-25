@@ -11,9 +11,18 @@ di_platform_eshop:
     path: /eshop
     defaults: { _controller: DIPlatformBundle:Default:eshop }
 
-#
-#
-#di_platform_cart:
-#    path: /cart/
-#    defaults: { _controller: DIForumBundle:Default:cart }
+di_platform_pimp:
+    path: /pimp
+    defaults: { _controller: DIPlatformBundle:Default:pimp }
 
+di_platform_member:
+    path: /member
+    defaults: { _controller: DIPlatformBundle:Default:member }
+
+di_platform_about:
+    path: /about
+    defaults: { _controller: DIPlatformBundle:Default:about }
+
+di_platform_cart:
+    path: /cart
+    defaults: { _controller: DIForumBundle:Default:cart }
