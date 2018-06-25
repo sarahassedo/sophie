@@ -1,0 +1,19 @@
+di_platform_homepage:
+    path:     /home
+    defaults: { _controller: DIPlatformBundle:Default:index }
+
+#
+#di_platform_signup:
+#    path: /signup
+#    defaults: { _controller: DIForumBundle:Default:signup }
+#
+di_platform_eshop:
+    path: /eshop
+    defaults: { _controller: DIPlatformBundle:Default:eshop }
+
+#
+#
+#di_platform_cart:
+#    path: /cart/
+#    defaults: { _controller: DIForumBundle:Default:cart }
+
