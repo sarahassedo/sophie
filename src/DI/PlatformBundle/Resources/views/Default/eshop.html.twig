@@ -23,10 +23,11 @@
 </div>
 
     {% set n = products|length %}
-    {% for i in range(0, n) %}
+    {% for i in range(0, n-1) %}
         {% if i is even or i == 0 %}
             {% set product1 = products[i] %}
-            {% if i + 1 < (n - 1) %}
+            {% set product2 = null %}
+            {% if i < (n - 1) %}
                 {% set product2 = products[i + 1] %}
                 {{ include('DIPlatformBundle:Default:products-2.html.twig', { 'product1': product1, 'product2': product2}) }}
             {% else %}
