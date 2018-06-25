@@ -34,14 +34,14 @@ class DefaultController extends Controller
     public function testProductAction()
     {
         $product1 = new Product();
-        $product1->setName('Macaron')
+        $product1->setNameEn('Macaron')
             ->setPrice(15)
-            ->setDescription('French biscuits')
+            ->setDescriptionEn('French biscuits')
             ->setImage('paris-brest.jpg');
         $product2 = new Product();
-        $product2->setName('Spring')
+        $product2->setNameEn('Spring')
             ->setPrice(28)
-            ->setDescription('French little biscuits')
+            ->setDescriptionEn('French little biscuits')
             ->setImage('Biscuit-breton.jpg');
 
         $params = [

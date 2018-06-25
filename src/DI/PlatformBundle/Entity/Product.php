@@ -24,9 +24,16 @@ class Product
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=255)
+     * @ORM\Column(name="name_en", type="string", length=255)
      */
-    private $name;
+    private $name_en;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name_fr", type="string", length=255)
+     */
+    private $name_fr;
 
     /**
      * @var int
@@ -45,9 +52,16 @@ class Product
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="string", length=500)
+     * @ORM\Column(name="description_en", type="string", length=500)
      */
-    private $description;
+    private $description_en;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description_fr", type="string", length=500)
+     */
+    private $description_fr;
 
 
     /**
@@ -61,27 +75,27 @@ class Product
     }
 
     /**
-     * Set name
+     * Set name_en
      *
-     * @param string $name
+     * @param string $name_en
      *
      * @return Product
      */
-    public function setName($name)
+    public function setNameEn($name_en)
     {
-        $this->name = $name;
+        $this->name_en = $name_en;
 
         return $this;
     }
 
     /**
-     * Get name
+     * Get name_en
      *
      * @return string
      */
-    public function getName()
+    public function getNameEn()
     {
-        return $this->name;
+        return $this->name_en;
     }
 
     /**
@@ -133,27 +147,63 @@ class Product
     }
 
     /**
-     * Set description
+     * Set description_en
      *
-     * @param string $description
+     * @param string $description_en
      *
      * @return Product
      */
-    public function setDescription($description)
+    public function setDescriptionEn($description_en)
     {
-        $this->description = $description;
+        $this->description_en = $description_en;
 
         return $this;
     }
 
     /**
-     * Get description
+     * Get description_en
      *
      * @return string
      */
-    public function getDescription()
+    public function getDescriptionEn()
     {
-        return $this->description;
+        return $this->description_en;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNameFr()
+    {
+        return $this->name_fr;
+    }
+
+    /**
+     * @param string $name_fr
+     * @return Product
+     */
+    public function setNameFr($name_fr)
+    {
+        $this->name_fr = $name_fr;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescriptionFr()
+    {
+        return $this->description_fr;
+    }
+
+    /**
+     * @param string $description_fr
+     * @return Product
+     */
+    public function setDescriptionFr($description_fr)
+    {
+        $this->description_fr = $description_fr;
+        return $this;
     }
 }
 
