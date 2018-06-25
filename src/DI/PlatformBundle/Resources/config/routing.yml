@@ -5,7 +5,7 @@ di_platform_homepage:
 #
 #di_platform_signup:
 #    path: /signup
-#    defaults: { _controller: DIForumBundle:Default:signup }
+#    defaults: { _controller: DIPlatformBundle:Default:signup }
 #
 di_platform_eshop:
     path: /eshop
@@ -25,4 +25,7 @@ di_platform_about:
 
 di_platform_cart:
     path: /cart
-    defaults: { _controller: DIForumBundle:Default:cart }
+    defaults: { _controller: DIPlatformBundle:Default:cart }
+di_platform_test_product:
+    path: /testprod
+    defaults: { _controller: DIPlatformBundle:Default:testProduct }

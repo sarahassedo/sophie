@@ -6,29 +6,36 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>{% block title %}Welcome!{% endblock %}</title>
+    <title>
+        {% block title %}Welcome!{% endblock %}
+    </title>
+
     {% block stylesheets %}
         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" type="text/css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
               integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
               crossorigin="anonymous">
-
     {% endblock %}
 
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
 </head>
 <body>
+
 {% block body %}
-
     {{ include('DIPlatformBundle:Default:navbar.html.twig') }}
-
-
 {% endblock %}
+
 {% block javascripts %}
     <script
             src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>
 {% endblock %}
+
 </body>
+
+{% block footer %}
+    {{ include('DIPlatformBundle:Default:footer.html.twig') }}
+{% endblock %}
+
 </html>

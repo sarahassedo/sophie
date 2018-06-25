@@ -2,6 +2,7 @@
 
 namespace DI\PlatformBundle\Controller;
 
+use DI\PlatformBundle\Entity\Product;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
@@ -14,7 +15,39 @@ class DefaultController extends Controller
 
     public function eshopAction()
     {
-        return $this->render('DIPlatformBundle:Default:eshop.html.twig');
+        $params = [
+            'products' => $this->getProducts()
+        ];
+        return $this->render('DIPlatformBundle:Default:eshop.html.twig', $params);
 
+    }
+
+    public function testProductAction()
+    {
+        $product1 = new Product();
+        $product1->setName('Macaron')
+            ->setPrice(15)
+            ->setDescription('French biscuits')
+            ->setImage('paris-brest.jpg');
+        $product2 = new Product();
+        $product2->setName('Spring')
+            ->setPrice(28)
+            ->setDescription('French little biscuits')
+            ->setImage('Biscuit-breton.jpg');
+
+        $params = [
+            'products' => [
+                $product1,
+                $product2
+            ]
+        ];
+        return $this->render('DIPlatformBundle:Default:product-test.html.twig', $params);
+    }
+
+    protected function getProducts()
+    {
+        $repo = $this->getDoctrine()->getRepository(Product::class);
+        $products = $repo->findAll();
+        return $products;
     }
 }

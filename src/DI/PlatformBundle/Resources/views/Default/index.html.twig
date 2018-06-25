@@ -51,11 +51,13 @@
             </p>
         </main>
 
-        <footer class="mastfoot mt-auto">
+        {#<footer class="mastfoot mt-auto">
             <div class="inner">
                 <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
             </div>
-        </footer>
+        </footer>#}
+        {{ include('DIPlatformBundle:Default:footer.html.twig') }}
+
     </div>
 
  {#   <section class="page-section clearfix">
@@ -100,16 +102,14 @@
     </section>
 #}
 
-    <footer class="footer text-faded text-center py-5">
-        <div class="container">
-            <p class="m-0 small">Copyright &copy; Your Website 2018</p>
-        </div>
-    </footer>
+{% endblock %}
+
+{% block footer %}
+    {# this overwrites the contents of the block from the parent #}
 {% endblock %}
 
 {% block javascripts %}
     {{ parent() }}
-    <!-- Bootstrap core JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
