@@ -19,9 +19,9 @@ di_platform_member:
     path: /member
     defaults: { _controller: DIPlatformBundle:Default:member }
 
-di_platform_about:
-    path: /about
-    defaults: { _controller: DIPlatformBundle:Default:about }
+di_platform_contact:
+    path: /contact
+    defaults: { _controller: DIPlatformBundle:Default:contact }
 
 di_platform_cart:
     path: /cart

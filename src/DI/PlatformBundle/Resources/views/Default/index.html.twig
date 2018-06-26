@@ -15,6 +15,7 @@
 
     <!--link rel="stylesheet" href="{{ asset('css/business-casual.css') }}" type="text/css"/-->
     <link rel="stylesheet" href="{{ asset('css/cover.css') }}" type="text/css"/>
+    <link href="{{ asset('css/library.css') }}" rel="stylesheet">
 
 
 {% endblock %}
@@ -31,10 +32,10 @@
         <span class="site-heading-lower">Sophie Biscuits</span>
     </h1>#}
 
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <div class="cover-container d-flex w-100 h-100 mx-auto flex-column">
+        {{ include('DIPlatformBundle:Default:navbar.html.twig') }}
         <header class="masthead mb-auto">
             <div class="inner">
-                {{ include('DIPlatformBundle:Default:navbar.html.twig') }}
                 {#<nav class="nav nav-masthead justify-content-center">
                     <a class="nav-link active" href="#">Home</a>
                     <a class="nav-link" href="#">Features</a>
