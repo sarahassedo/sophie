@@ -23,6 +23,10 @@
 .eshop-hero {
     background-image: url('../image/eclairs-choco.jpg');
 }
+
+.bg-home {
+    background-image: url('../image/tous-biscuit.jpg');
+}
 /*
  * Dummy devices (replace them with your own or something else entirely!)
  */

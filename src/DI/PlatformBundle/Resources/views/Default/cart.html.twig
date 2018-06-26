@@ -12,7 +12,6 @@
 
 {% block body %}
 {{ parent() }}
-{{ dump() }}
 <body class="bg-light">
 
 <div class="container">
@@ -45,10 +44,15 @@
                     <div>
                         <a href="{{ path('di_platform_eshop') }}">
                         <h6 class="my-0">{{ product.nameEn }}</h6>
-                            {#<small class="text-muted">{{ product.descriptionEn }}</small>#}
+                            <small class="text-muted">{{ product.quantity }} x ₪{{ product.price }}</small>
                         </a>
                     </div>
+                    <div>
+                        <span class="text-muted">{{ product.quantity }}</span>
+                    </div>
                     <span class="text-muted">₪{{ product.price * product.quantity }}</span>
+                    {#<small class="text-muted">{{ product.image }}</small>#}
+
                 </li>
 
         {% else %}
