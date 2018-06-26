@@ -24,11 +24,17 @@ class DefaultController extends Controller
 
     public function cartAction()
     {
-//        $params = [
-//            'products' => $this->getProducts()
-//        ];
-        return $this->render('DIPlatformBundle:Default:cart.html.twig');
+        $params = [
+            'products' => $this->getProducts()
+        ];
+        return $this->render('DIPlatformBundle:Default:cart.html.twig', $params);
 
+    }
+
+    public function contactAction()
+    {
+
+        return $this->render('DIPlatformBundle:Default:contact.html.twig');
     }
 
     public function testProductAction()
