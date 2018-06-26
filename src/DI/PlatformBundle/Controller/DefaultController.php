@@ -22,10 +22,20 @@ class DefaultController extends Controller
 
     }
 
+    protected function getProductsTotalPrice($products)
+    {
+        $total = 0;
+
+        return $total;
+    }
+
     public function cartAction()
     {
+        $products = $this->getProducts();
+        $total = $this->getProductsTotalPrice($products);
         $params = [
-            'products' => $this->getProducts()
+            'products' => $products,
+            'total' => $total
         ];
         return $this->render('DIPlatformBundle:Default:cart.html.twig', $params);
 
