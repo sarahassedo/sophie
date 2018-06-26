@@ -1,3 +1,4 @@
+/*
 body {
   font-family: 'Georgia';
   background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../image/legumes.jpg");
@@ -6,13 +7,16 @@ body {
   background-size: cover;
 }
 
+*/
+
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: 'Georgia';
+  font-family: 'Georgia', serif;
 }
 
 p {
@@ -28,7 +32,7 @@ p {
   margin-bottom: 5rem;
   text-transform: uppercase;
   line-height: 1;
-  font-family: 'Georgia';
+  font-family: 'Georgia', serif;
 }
 
 .site-heading .site-heading-upper {
@@ -70,7 +74,7 @@ p {
 
 #mainNav {
   background-color: darkgrey;
-  font-family: 'Georgia';
+font-family: 'Georgia', serif;
   opacity: 0.83;
 }
 
