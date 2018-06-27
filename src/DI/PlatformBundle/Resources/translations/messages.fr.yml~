@@ -1,4 +1,63 @@
-'Contact us - Biscuits': '__Contact us - Biscuits'
-'Come On In': '__Come On In'
-'We''re Open': '__We''re Open'
-Sunday: __Sunday
+'Contact us - Biscuits': 'Contactez nous - Biscuits'
+'Come On In': 'Venez'
+'We''re Open': 'Nous sommes ouverts'
+Sunday: Dimanche
+Home: Accueil
+'Contact us': 'Contactez nous'
+Cart: Panier
+'Checkout form': 'Formulaire de paiement'
+'Let your order arrived at home': 'Faites vous livrer chez vous'
+'Your cart': 'Votre panier'
+'This list is empty.': 'La liste est vide'
+'Billing address': 'Adresse de paiement'
+'First name': 'Prénom'
+'Valid first name is required.': 'Un prénom valide est requis'
+'Last name': 'Nom de famille'
+'Valid last name is required.': 'Un nom de famille valide est requis.'
+Email: Email
+'Please enter a valid email address for shipping updates.': 'Entrez une adresse email valide pour la livraison'
+Address: Adresse
+'Please enter your shipping address.': 'Entrez votre adresse de livraison'
+'Address 2': 'Addresse 2'
+(Optional): (Optionel)
+'>Country': Pays
+Choose...: Choisissez...
+'Please select a valid country.': 'Choisissez un pays valide'
+City: Ville
+'Please provide a valid state.': 'Choisissez une ville valide'
+Zip: "Code postal"
+'Zip code required.': 'Code postal requis'
+'Shipping address is the same as my billing address': 'Mon adresse de livraison est la même que mon adresse de paiement'
+'Save this information for next time': 'Gardez ces informations pour la prochaine fois'
+Payment: Paiement
+'Credit card': 'Carte de crédit'
+'Debit card': 'Carte de débit'
+'Name on card': 'Nom sur la carte'
+'Full name as displayed on card': 'Nom complet sur la carte'
+'Name on card is required': 'Le nom sur la carte est requis'
+'Credit card number': 'Numéro de carte de crédit'
+'Credit card number is required': 'Numéro de carte de crédit requis'
+Expiration: "Date d'expiration"
+'Expiration date required': "Date d'expiration requise"
+'Security code required': 'Code de sécurité requis'
+'Continue to pay': 'Continuez pour payer'
+'Home - Biscuits': 'Accueil - Biscuits'
+'Welcome to the Biscuits Factory!': "Bienvenue à la Buiscuits' Industry"
+'You will find all biscuits'' type. You can order today and receive it tomorrow(*). Enjoy!': 'Vous trouverez tous types de biscuits. Vous pouvez commander maintenant et les recevoir demain(*). Profitez bien!'
+'See the wonderland of biscuits': 'Découvrez tous nos produits'
+'E-Shop - Biscuits': 'E-Shop - Biscuits'
+'There are no products!': "Il n'y a pas de produit"
+'"We''re Open': 'Nous sommes ouverts'
+Monday: Lundi
+Tuesday: Mardi
+Wednesday: Mercredi
+Thursday: Jeudi
+Friday: Vendredi
+Saturday: Samedi
+'Call Anytime': 'Appelez quand vous voulez'
+'Follow us': 'Suivez nous'
+'Who we are?': 'Qui sommes-nous'
+'How to order': 'Comment commander'
+'How to pay': 'Comment payer'
+Privacy: Privé
+Terms: Conditions

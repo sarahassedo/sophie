@@ -6,6 +6,7 @@ use DI\PlatformBundle\Cart\Cart;
 use DI\PlatformBundle\Entity\Product;
 use DI\PlatformBundle\Repository\ProductRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
@@ -18,17 +19,20 @@ class DefaultController extends Controller
         return $this->render('DIPlatformBundle:Default:index.html.twig');
     }
 
-    public function eshopAction()
+    public function eshopAction(Request $request)
     {
+        $locale = $request->getLocale();
         $repo = $this->getDoctrine()->getRepository(Product::class);
+
         $heroProduct = $repo->find(static::HERO_PRODUCT_ID);
-        $otherProducts = $this->getProductsExcept($heroProduct);
+        $heroProduct = $this->getLocaleAwareProduct($heroProduct, $locale);
+        $otherProducts = $this->getLocaleAwareProducts(
+            $this->getProductsExcept($heroProduct), $locale);
         $params = [
             'heroProduct' => $heroProduct,
             'products' => $otherProducts
         ];
         return $this->render('DIPlatformBundle:Default:eshop.html.twig', $params);
-
     }
 
 
@@ -115,5 +119,22 @@ class DefaultController extends Controller
     {
         $cart = Cart::getInstance($this->getDoctrine()->getManager());
         return $cart;
+    }
+
+    protected function getLocaleAwareProduct(Product $product, $locale)
+    {
+        $laProduct = \DI\PlatformBundle\Cart\Product::create($product)
+            ->setLocale($locale);
+        return $laProduct;
+    }
+
+    protected function getLocaleAwareProducts(array $products, $locale)
+    {
+        $laProducts = [];
+        foreach ($products as $product) {
+            $laProduct = $this->getLocaleAwareProduct($product, $locale);
+            $laProducts[] = $laProduct;
+        }
+        return $laProducts;
     }
 }
