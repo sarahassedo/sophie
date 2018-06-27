@@ -34,11 +34,10 @@
         <div class="language-selector">
             <a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'fr'})) }}">
                 <div class="language-flag french"></div>
-                Français
+
             </a>
             <a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'en'})) }}">
                 <div class="language-flag english"></div>
-                English
             </a>
         </div>
         <a class="py-2 d-none d-md-inline-block"

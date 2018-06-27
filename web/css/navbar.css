@@ -3,10 +3,16 @@
 }
 
 .language-flag {
-    width: 20px;
-    height: 12px;
+    width: 30px;
+    height: 19px;
+    margin: 10px;
+    -webkit-background-size: 30px 20px;
+    background-size: 30px 20px;
 }
 
 .french {
     background-image: url("../image/fr-flag.png");
+}
+.english {
+    background-image: url("../image/en-flag.png");
 }
