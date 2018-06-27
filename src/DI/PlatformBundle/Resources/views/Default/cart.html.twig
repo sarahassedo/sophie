@@ -17,8 +17,8 @@
 <div class="container">
     <div class="py-5 text-center">
         <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-        <h2>Checkout form</h2>
-        <p class="lead">Let your order arrived at home</p>
+        <h2>{% trans %}Checkout form{% endtrans %}</h2>
+        <p class="lead">{% trans %}Let your order arrived at home{% endtrans %}</p>
     </div>
     {#
 
@@ -34,7 +34,7 @@
     <div class="row">
         <div class="col-md-4 order-md-2 mb-4">
             <h4 class="d-flex justify-content-between align-items-center mb-3">
-                <span class="text-muted">Your cart</span>
+                <span class="text-muted">{% trans %}Your cart{% endtrans %}</span>
                 <span class="badge badge-secondary badge-pill">{{ products|length }}</span>
             </h4>
             <ul class="list-group mb-3">
@@ -56,7 +56,7 @@
                 </li>
 
         {% else %}
-            <div>This list is empty.</div>
+            <div>{% trans %}This list is empty.{% endtrans %}</div>
         {% endfor %}
             </ul>
 
@@ -105,21 +105,21 @@
 
         </div>
         <div class="col-md-8 order-md-1">
-            <h4 class="mb-3">Billing address</h4>
+            <h4 class="mb-3">{% trans %}Billing address{% endtrans %}</h4>
             <form class="needs-validation" novalidate>
                 <div class="row">
                     <div class="col-md-6 mb-3">
-                        <label for="firstName">First name</label>
+                        <label for="firstName">{% trans %}First name{% endtrans %}</label>
                         <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
                         <div class="invalid-feedback">
-                            Valid first name is required.
+                            {% trans %}Valid first name is required.{% endtrans %}
                         </div>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label for="lastName">Last name</label>
+                        <label for="lastName">{% trans %}Last name{% endtrans %}</label>
                         <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
                         <div class="invalid-feedback">
-                            Valid last name is required.
+                            {% trans %}Valid last name is required.{% endtrans %}
                         </div>
                     </div>
                 </div>
@@ -138,78 +138,78 @@
                 </div>#}
 
                 <div class="mb-3">
-                    <label for="email">Email <span class="text-muted"></span></label>
+                    <label for="email">{% trans %}Email{% endtrans %} <span class="text-muted"></span></label>
                     <input type="email" class="form-control" id="email" placeholder="you@example.com">
                     <div class="invalid-feedback">
-                        Please enter a valid email address for shipping updates.
+                        {% trans %}Please enter a valid email address for shipping updates.{% endtrans %}
                     </div>
                 </div>
 
                 <div class="mb-3">
-                    <label for="address">Address</label>
+                    <label for="address">{% trans %}Address{% endtrans %}</label>
                     <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
                     <div class="invalid-feedback">
-                        Please enter your shipping address.
+                        {% trans %}Please enter your shipping address.{% endtrans %}
                     </div>
                 </div>
 
                 <div class="mb-3">
-                    <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
+                    <label for="address2">{% trans %}Address 2{% endtrans %} <span class="text-muted">{% trans %}(Optional){% endtrans %}</span></label>
                     <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
                 </div>
 
                 <div class="row">
                     <div class="col-md-5 mb-3">
-                        <label for="country">Country</label>
+                        <label for="country"{% trans %}>Country{% endtrans %}</label>
                         <select class="custom-select d-block w-100" id="country" required>
-                            <option value="">Choose...</option>
+                            <option value="">{% trans %}Choose...{% endtrans %}</option>
                             <option>Israel</option>
                         </select>
                         <div class="invalid-feedback">
-                            Please select a valid country.
+                            {% trans %}Please select a valid country.{% endtrans %}
                         </div>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <label for="state">State</label>
+                        <label for="state">{% trans %}City{% endtrans %}</label>
                         <select class="custom-select d-block w-100" id="state" required>
-                            <option value="">Choose...</option>
+                            <option value="">{% trans %}Choose...{% endtrans %}</option>
                             <option>Tel Aviv-Yaffo</option>
                             <option>Ramat-Aviv</option>
                             <option>Ramat Gan</option>
                         </select>
                         <div class="invalid-feedback">
-                            Please provide a valid state.
+                            {% trans %}Please provide a valid state.{% endtrans %}
                         </div>
                     </div>
                     <div class="col-md-3 mb-3">
-                        <label for="zip">Zip</label>
+                        <label for="zip">{% trans %}Zip{% endtrans %}</label>
                         <input type="text" class="form-control" id="zip" placeholder="" required>
                         <div class="invalid-feedback">
-                            Zip code required.
+                            {% trans %}Zip code required.{% endtrans %}
                         </div>
                     </div>
                 </div>
                 <hr class="mb-4">
                 <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="same-address">
-                    <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
+                    <label class="custom-control-label" for="same-address">{% trans %}Shipping address is the same as my billing address{% endtrans %}</label>
                 </div>
                 <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="save-info">
-                    <label class="custom-control-label" for="save-info">Save this information for next time</label>
+                    <label class="custom-control-label" for="save-info">{% trans %}Save this information for next time{% endtrans %}</label>
                 </div>
                 <hr class="mb-4">
 
-                <h4 class="mb-3">Payment</h4>
+                <h4 class="mb-3">{% trans %}Payment{% endtrans %}</h4>
 
                 <div class="d-block my-3">
                     <div class="custom-control custom-radio">
                         <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
-                        <label class="custom-control-label" for="credit">Credit card</label>
+                        <label class="custom-control-label" for="credit">{% trans %}Credit card{% endtrans %}</label>
                     </div>
                     <div class="custom-control custom-radio">
                         <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-                        <label class="custom-control-label" for="debit">Debit card</label>
+                        <label class="custom-control-label" for="debit">{% trans %}Debit card{% endtrans %}</label>
                     </div>
                     <div class="custom-control custom-radio">
                         <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
@@ -218,39 +218,39 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6 mb-3">
-                        <label for="cc-name">Name on card</label>
+                        <label for="cc-name">{% trans %}Name on card{% endtrans %}</label>
                         <input type="text" class="form-control" id="cc-name" placeholder="" required>
-                        <small class="text-muted">Full name as displayed on card</small>
+                        <small class="text-muted">{% trans %}Full name as displayed on card{% endtrans %}</small>
                         <div class="invalid-feedback">
-                            Name on card is required
+                            {% trans %}Name on card is required{% endtrans %}
                         </div>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label for="cc-number">Credit card number</label>
+                        <label for="cc-number">{% trans %}Credit card number{% endtrans %}</label>
                         <input type="text" class="form-control" id="cc-number" placeholder="" required>
                         <div class="invalid-feedback">
-                            Credit card number is required
+                            {% trans %}Credit card number is required{% endtrans %}
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-3 mb-3">
-                        <label for="cc-expiration">Expiration</label>
+                        <label for="cc-expiration">{% trans %}Expiration{% endtrans %}</label>
                         <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
                         <div class="invalid-feedback">
-                            Expiration date required
+                            {% trans %}Expiration date required{% endtrans %}
                         </div>
                     </div>
                     <div class="col-md-3 mb-3">
                         <label for="cc-expiration">CVV</label>
                         <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
                         <div class="invalid-feedback">
-                            Security code required
+                            {% trans %}Security code required{% endtrans %}
                         </div>
                     </div>
                 </div>
                 <hr class="mb-4">
-                <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to pay</button>
+                <button class="btn btn-primary btn-lg btn-block" type="submit">{% trans %}Continue to pay{% endtrans %}</button>
             </form>
         </div>
     </div>

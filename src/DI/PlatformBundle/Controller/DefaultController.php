@@ -4,10 +4,14 @@ namespace DI\PlatformBundle\Controller;
 
 use DI\PlatformBundle\Cart\Cart;
 use DI\PlatformBundle\Entity\Product;
+use DI\PlatformBundle\Repository\ProductRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
 {
+
+    const HERO_PRODUCT_ID = 6;
+
     public function indexAction()
     {
 
@@ -16,8 +20,12 @@ class DefaultController extends Controller
 
     public function eshopAction()
     {
+        $repo = $this->getDoctrine()->getRepository(Product::class);
+        $heroProduct = $repo->find(static::HERO_PRODUCT_ID);
+        $otherProducts = $this->getProductsExcept($heroProduct);
         $params = [
-            'products' => $this->getProducts()
+            'heroProduct' => $heroProduct,
+            'products' => $otherProducts
         ];
         return $this->render('DIPlatformBundle:Default:eshop.html.twig', $params);
 
@@ -88,6 +96,18 @@ class DefaultController extends Controller
     {
         $repo = $this->getDoctrine()->getRepository(Product::class);
         $products = $repo->findAll();
+        return $products;
+    }
+
+    protected function getProductsExcept(Product $exception)
+    {
+        /** @var ProductRepository $repo */
+        $repo = $this->getDoctrine()->getRepository(Product::class);
+        $qb = $repo->createQueryBuilder('p')
+            ->where('p.id != :productId')
+            ->setParameter('productId', $exception->getId());
+
+        $products = $qb->getQuery()->getResult();
         return $products;
     }
 

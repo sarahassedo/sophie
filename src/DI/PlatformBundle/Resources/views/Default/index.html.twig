@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 
-{% block title %}Home - Biscuits{% endblock %}
+{% block title %}{% trans %}Home - Biscuits{% endtrans %}{% endblock %}
 
 
 {% block stylesheets %}
@@ -45,10 +45,10 @@
         </header>
 
         <main role="main" class="bg-home inner cover">
-            <h1 class="cover-heading">Welcome to the Biscuit's industry !</h1>
-            <p class="lead">You will find all biscuits' type. You can order today and receive it tomorrow(*). Enjoy!</p>
+            <h1 class="cover-heading">{% trans %}Welcome to the Biscuits Factory!{% endtrans %}</h1>
+            <p class="lead">{% trans %}You will find all biscuits' type. You can order today and receive it tomorrow(*). Enjoy!{% endtrans %}</p>
             <p class="lead">
-                <a href="{{ path('di_platform_eshop') }}" class="btn btn-lg btn-secondary">See the wonderland of biscuits</a>
+                <a href="{{ path('di_platform_eshop') }}" class="btn btn-lg btn-secondary">{% trans %}See the wonderland of biscuits{% endtrans %}</a>
             </p>
         </main>
 

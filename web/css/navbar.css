@@ -1,0 +1,12 @@
+.language-selector {
+    display: inline-flex;
+}
+
+.language-flag {
+    width: 20px;
+    height: 12px;
+}
+
+.french {
+    background-image: url("../image/fr-flag.png");
+}

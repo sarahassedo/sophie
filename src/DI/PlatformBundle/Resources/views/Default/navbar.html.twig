@@ -1,19 +1,56 @@
- <!-- Navigation -->
-    <nav class="site-header sticky-top py-1">
-        <div class="container d-flex flex-column flex-md-row justify-content-between">
-            <a class="py-2" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                     class="d-block mx-auto"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+<!-- Navigation -->
+<nav class="site-header sticky-top py-1">
+    <div class="container d-flex flex-column flex-md-row justify-content-between">
+        <a class="py-2" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 class="d-block mx-auto">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
+                <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
+                <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
+                <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
+                <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
+                <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
+            </svg>
+        </a>
+        <label for="country">{#
+                <ul class="lang-menu">#}
+        </label>
+        <!--select class="lang-menu" id="country" required>
+            <option>
+                <a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'fr'})) }}">
+                    <div class="language-flag french"></div>
+                    Français
+                </a>
+            </option>
+            <option>
+                <a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'en'})) }}">English</a>
+            </option>
+            {#<li><a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'fr'})) }}">Français</a></li>#}
+            {#<li><a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'en'})) }}">English</a></li>#}
+            {#</ul>#}
+        </select-->
+        <div class="language-selector">
+            <a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'fr'})) }}">
+                <div class="language-flag french"></div>
+                Français
             </a>
-            <a class="py-2 d-none d-md-inline-block" href="{{ path('di_platform_homepage') }}">Home</a>
-            <a class="py-2 d-none d-md-inline-block" href="{{ path('di_platform_eshop') }}">E-Shop</a>
-            <a class="py-2 d-none d-md-inline-block" href="{{ path('di_platform_pimp') }}">Pimp your *</a>
-            {#<a class="py-2 d-none d-md-inline-block" href="{{ path('di_platform_member') }}">Member</a>#}
-            <a class="py-2 d-none d-md-inline-block" href="{{ path('di_platform_contact') }}">Contact us</a>
-            <a class="py-2 d-none d-md-inline-block" href="{{ path('di_platform_cart') }}">Cart</a>
+            <a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'en'})) }}">
+                <div class="language-flag english"></div>
+                English
+            </a>
         </div>
-    </nav>
+        <a class="py-2 d-none d-md-inline-block"
+           href="{{ path('di_platform_homepage') }}">{% trans %}Home{% endtrans %}</a>
+        <a class="py-2 d-none d-md-inline-block" href="{{ path('di_platform_eshop') }}">E-Shop</a>
+        {#<a class="py-2 d-none d-md-inline-block" href="{{ path('di_platform_pimp') }}">Pimp your *</a>#}
+        {#<a class="py-2 d-none d-md-inline-block" href="{{ path('di_platform_member') }}">Member</a>#}
+        <a class="py-2 d-none d-md-inline-block"
+           href="{{ path('di_platform_contact') }}">{% trans %}Contact us{% endtrans %}</a>
+        <a class="py-2 d-none d-md-inline-block" href="{{ path('di_platform_cart') }}">{% trans %}Cart{% endtrans %}</a>
+    </div>
+</nav>
 
 
 

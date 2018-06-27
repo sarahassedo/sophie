@@ -1,6 +1,8 @@
 di_platform_homepage:
-    path:     /home
+    path:     /{_locale}/home
     defaults: { _controller: DIPlatformBundle:Default:index }
+    requirements:
+        _locale: en|fr
 
 #
 #di_platform_signup:
@@ -8,28 +10,34 @@ di_platform_homepage:
 #    defaults: { _controller: DIPlatformBundle:Default:signup }
 #
 di_platform_eshop:
-    path: /eshop
+    path: /{_locale}/eshop
     defaults: { _controller: DIPlatformBundle:Default:eshop }
-
-di_platform_pimp:
-    path: /pimp
-    defaults: { _controller: DIPlatformBundle:Default:pimp }
+    requirements:
+        _locale: en|fr
+#
+#di_platform_pimp:
+#    path: /pimp
+#    defaults: { _controller: DIPlatformBundle:Default:pimp }
 
 di_platform_member:
     path: /member
     defaults: { _controller: DIPlatformBundle:Default:member }
 
 di_platform_contact:
-    path: /contact
+    path: /{_locale}/contact
     defaults: { _controller: DIPlatformBundle:Default:contact }
+    requirements:
+        _locale: en|fr
 
 di_platform_cart:
-    path: /cart
+    path: /{_locale}/cart
     defaults: { _controller: DIPlatformBundle:Default:cart }
+    requirements:
+        _locale: en|fr
 
-di_platform_test_product:
-    path: /testprod
-    defaults: { _controller: DIPlatformBundle:Default:testProduct }
+#di_platform_test_product:
+#    path: /testprod
+#    defaults: { _controller: DIPlatformBundle:Default:testProduct }
 
 di_platform_addtocart:
     path: /addtocart/{id}
